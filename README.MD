@@ -2,6 +2,8 @@
 
 SkNebula currently serves one purpose: adding an event listener for the "player digging" serverbound packet.
 
+**Requires ProtocolLib**
+
 ## Available Syntax
 **Events**
 - `[on] player dig[ging]`: Fired when a "player digging" packet is received from a client
