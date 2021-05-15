@@ -2,6 +2,8 @@
 
 SkNebula currently serves one purpose: adding an event listener for the "player digging" serverbound packet.
 
+[![SkriptHubViewTheDocs](http://skripthub.net/static/addon/ViewTheDocsButton.png)](http://skripthub.net/docs/?addon=SkNebula)
+
 **Requires ProtocolLib**
 
 ## Available Syntax
