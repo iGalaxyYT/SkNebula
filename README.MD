@@ -1,4 +1,4 @@
-# SkNebula
+# 🌌 SkNebula
 
 SkNebula currently serves one purpose: adding an event listener for the "player digging" serverbound packet.
 
