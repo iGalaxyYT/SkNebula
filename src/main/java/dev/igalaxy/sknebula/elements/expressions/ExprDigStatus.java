@@ -2,6 +2,7 @@ package dev.igalaxy.sknebula.elements.expressions;
 
 import ch.njol.skript.ScriptLoader;
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.*;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
@@ -12,6 +13,15 @@ import com.comphenix.protocol.wrappers.EnumWrappers;
 import dev.igalaxy.sknebula.events.PlayerDiggingEvent;
 import org.bukkit.event.Event;
 
+@Name("Dig Status")
+@Description("The dig status of a Player Digging event.")
+@Examples({
+        "on player digging:",
+        "\tthe dig status is start digging:",
+        "\t\tsend \"[!] You started breaking a block!\" to event-player"
+})
+@Since("1.0.0")
+@RequiredPlugins({"ProtocolLib"})
 public class ExprDigStatus extends SimpleExpression<EnumWrappers.PlayerDigType> {
 
     static {

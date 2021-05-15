@@ -1,23 +1,29 @@
 package dev.igalaxy.sknebula.elements.events;
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.*;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.registrations.EventValues;
-import ch.njol.skript.util.Direction;
 import ch.njol.skript.util.Getter;
-import com.comphenix.protocol.wrappers.EnumWrappers;
-import com.comphenix.protocol.wrappers.WrappedDataWatcher;
 import dev.igalaxy.sknebula.events.PlayerDiggingEvent;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
 import javax.annotation.Nullable;
 
+@Name("Player Digging")
+@Description({"Fired when a \"player digging\" packet (https://wiki.vg/Protocol#Player_Digging) is received from a client."})
+@Examples({
+        "on player digging:",
+        "\tthe dig status is start digging:",
+        "\t\tsend \"[!] You started breaking a block!\" to event-player"
+})
+@Since("1.0.0")
+@RequiredPlugins({"ProtocolLib"})
 public class EvtPlayerDig extends SkriptEvent {
 
     static {
