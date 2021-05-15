@@ -27,9 +27,7 @@ import javax.annotation.Nullable;
 public class EvtPlayerDig extends SkriptEvent {
 
     static {
-        Skript.registerEvent("player dig", EvtPlayerDig.class, PlayerDiggingEvent.class,"[player] dig[ging]")
-                .description("Called when a player sends a digging status to the server, e.g. when they start or stop digging.")
-                .examples("on player digging:");
+        Skript.registerEvent("player dig", EvtPlayerDig.class, PlayerDiggingEvent.class,"[player] dig[ging]");
         EventValues.registerEventValue(PlayerDiggingEvent.class, Player.class, new Getter<Player, PlayerDiggingEvent>() {
             @Override
             @Nullable
