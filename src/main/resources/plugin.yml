@@ -1,0 +1,7 @@
+name: SkNebula
+version: @version@
+depend: [Skript, ProtocolLib]
+main: dev.igalaxy.sknebula.SkNebula
+api-version: 1.16
+authors: [ iGalaxy ]
+website: https://github.com/iGalaxyYT/SkNebula

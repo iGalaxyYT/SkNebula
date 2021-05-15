@@ -1,0 +1,13 @@
+version: 1.0-SNAPSHOT
+
+types:
+    digstatus: dig status
+
+digstatus:
+    start_destroy_block: start digging, start
+    abort_destroy_block: cancel digging, cancel, abort digging, abort
+    stop_destroy_block: finish digging, finish, stop digging, stop
+    drop_all_items: drop stack, stack dropped, drop all items, all items dropped
+    drop_item: drop item, item dropped
+    release_use_item: finish using item, finish item use, release item
+    swap_held_items: swap item, swap held item
