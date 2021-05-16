@@ -28,8 +28,13 @@ public class PacketListeners {
                 EnumWrappers.PlayerDigType status = statusFields.read(0);
                 EnumWrappers.Direction direction = directionFields.read(0);
                 PlayerDiggingEvent dig = new PlayerDiggingEvent(event.getPlayer(), status, position, direction);
-                Bukkit.getPluginManager().callEvent(dig);
-                if(dig.isCancelled()) event.setCancelled(true);
+                Bukkit.getScheduler().scheduleSyncDelayedTask(instance, new Runnable() {
+                    @Override
+                    public void run() {
+                        Bukkit.getPluginManager().callEvent(dig);
+                        if(dig.isCancelled()) event.setCancelled(true);
+                    }
+                }, 0L);
             }
         });
 

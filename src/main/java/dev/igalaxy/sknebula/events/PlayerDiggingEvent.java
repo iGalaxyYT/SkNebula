@@ -17,7 +17,7 @@ public class PlayerDiggingEvent extends Event implements Cancellable {
     private boolean cancelled;
 
     public PlayerDiggingEvent(Player player, EnumWrappers.PlayerDigType status, BlockPosition position, EnumWrappers.Direction direction) {
-        super(true);
+        super(false);
         this.player = player;
         this.status = status;
         this.position = position;
