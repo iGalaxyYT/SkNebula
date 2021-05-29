@@ -4,6 +4,7 @@ import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
+import dev.igalaxy.sknebula.bstats.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +27,10 @@ public final class SkNebula extends JavaPlugin {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        int pluginId = 11515;
+        Metrics metrics = new Metrics(this, pluginId);
+
         Bukkit.getConsoleSender().sendMessage("[SkNebula] SkNebula has been enabled!");
     }
 
